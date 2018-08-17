@@ -85,10 +85,6 @@ allprojects {
     }
 }
 
-if (project.file('user.gradle').exists()) {
-    apply from: "user.gradle"
-}
-
 
 task ci(dependsOn: [
                     ':app:assembleDevDebug',

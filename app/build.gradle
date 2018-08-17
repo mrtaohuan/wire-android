@@ -33,10 +33,14 @@ ext {
     avsGroup = 'com.wire'
 
     // proprietary avs artifact configuration
-    customAvsVersion = '4.5.9@aar'
+    customAvsVersion = '4.6.18@aar'
     customAvsInternalVersion = customAvsVersion
     customAvsName = 'avs'
     customAvsGroup = 'com.wearezeta.avs'
+}
+
+if (project.file('user.gradle').exists()) {
+    apply from: "user.gradle"
 }
 
 android {
